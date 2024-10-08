@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal finance tracker</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-blue-200">
+    <header class="bg-blue-500 text-white font-bold text-6xl text-center w-full rounded ">Personal finance tracker</header>
+    <!--<img class="w-full opacity h-auto" src="https://th.bing.com/th/id/OIP.Jm3IWhewKkjqCOw0vy24cwHaE8?w=254&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="">-->
+    <section id="income" class="flex justify-center items-center flex-col ">
+        <h2 class="text-white text-2xl font-bold bg-gradient-to-r from-yellow-400 to-red-900 text-green-00 text-center mt-2">Income</h2>
+        <input type="text" placeholder="What is your source of income" id="incm_src" class="w-full flex justify-center items-center border flex items-center text-center m-4 max-w-xl">
+        <input type="number" placeholder="Enter your salary" id="incm" class="border w-full m-4 text-center max-w-lg">
+        <button id="incomebtn" class=" text-white flex justify-center items-center w-1/3 h-auto bg-gradient-to-r from-blue-400 to-blue-900 rounded-full p-3 max-w-sm">Add income</button>
+    </section>
+    <section id="expenses" class="flex justify-center items-center flex-col ">
+        <h2 class="text-white text-2xl font-bold bg-gradient-to-r from-yellow-400 to-red-900 text-green-00 text-center mt-2">Expenses</h2>
+        <input type="text" placeholder="What is your cause of expense" id="exp_reason" class="w-full flex justify-center items-center border flex items-center text-center m-4 max-w-xl">
+        <input type="number" placeholder="Enter the amount" id="exp_amt" class="border w-full m-4 text-center max-w-lg">
+        <button id="expbtn" class=" text-white flex justify-center items-center w-1/3 h-auto bg-gradient-to-r from-blue-400 to-blue-900 rounded-full p-3 max-w-sm">Add expenses</button>
+    </section>
+    <section id="savings" class="flex justify-center items-center flex-col ">
+        <h2 class="text-white text-2xl font-bold bg-gradient-to-r from-yellow-400 to-red-900 text-green-00 text-center mt-2">Savings goals</h2>
+        <input type="text" placeholder="What is the savings goal reason" id="sav_goal" class="w-full flex justify-center items-center border flex items-center text-center m-4 max-w-xl">
+        <input type="number" placeholder="Enter the target amount" id="tar_amt" class="border w-full m-4 text-center max-w-lg">
+        <button id="savbtn" class=" text-white flex justify-center items-center w-1/3 h-auto bg-gradient-to-r from-blue-400 to-blue-900 rounded-full p-3 max-w-sm">Set goal</button>
+    </section>
+    <section id="summary" class="flex justify-center items-center flex-col ">
+        <h2 class="text-white text-2xl font-bold bg-gradient-to-r from-green-400 to-green-900 text-green-00 text-center mt-2">Summary</h2>
+        <div>
+            <h2 class="bold text-4xl text-green-900">Income entries:</h2>
+            <ul id="incomelists" class="text-2xl text-green-900">
+                
+            </ul>
+            <h2 class="bold text-4xl text-red-900">Expense entries:</h2>
+            <ul id="expenselists" class="text-2xl text-red-900">
+                
+            </ul>
+            <h2 class="bold text-4xl text-green-900">Savings Goal:</h2>
+            <ul id="savingsgoal" class="text-2xl text-green-900">
+                
+            </ul>
+        </div>
+        <p class="bold text-4xl text-green-900">Total income : ${}</p>
+        <p class="bold text-4xl text-red-900">Total expenses : ${}</p>
+        <p class="bold text-4xl text-green-900">Remaining savings : ${}</p>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
